@@ -2,7 +2,7 @@
 
 $dbConfig = [
     "host" => "localhost:3306",
-    "dbname" => "classicmodels",
+    "dbname" => "projet_sondage",
     "user" => "root",
     "pass" => "root"
 ];
