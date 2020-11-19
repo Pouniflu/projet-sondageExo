@@ -20,9 +20,9 @@ use Core\Database;
             $firstNamelength = strlen($firstName);
             $pseudolength = strlen($pseudo);
             
-            if($lastNamelength <= 255){
-                if($firstNamelength <= 255) {
-                    if($pseudolength <= 255){
+            if($lastNamelength <= 60){
+                if($firstNamelength <= 65) {
+                    if($pseudolength <= 60){
                 
                         if($email == $email2) {
 
@@ -46,13 +46,13 @@ use Core\Database;
                         }
 
                     } else {
-                        $erreur = "Votre pseudo ne doit pas dépasser 255 caractères";
+                        $erreur = "Votre pseudo ne doit pas dépasser 60 caractères";
                     }
                 } else {
-                    $erreur = "Votre Prénom ne doit pas dépasser 255 caractères";
+                    $erreur = "Votre Prénom ne doit pas dépasser 65 caractères";
                 }
             } else {
-                $erreur = "Votre Nom ne doit pas dépasser 255 caractères";
+                $erreur = "Votre Nom ne doit pas dépasser 60 caractères";
             }
 
 
