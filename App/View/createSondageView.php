@@ -20,5 +20,4 @@
             <button id="sendData">Valider le sondage</button>
         </form>
 
-    </body>
-</html>
+<?php include 'footer.php'?>
