@@ -1,7 +1,7 @@
 <?php
 
 $dbConfig = [
-    "host" => "localhost:3306",
+    "host" => "localhost",
     "dbname" => "projet_sondage",
     "user" => "root",
     "pass" => "root"
