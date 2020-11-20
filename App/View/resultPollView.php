@@ -10,7 +10,7 @@
         <h2>Résultat du sondage</h2>
 
         <!-- Affichage de la question --> 
-        <p><?php $question->question?></p>
+        <p><?php $question?></p>
 
         <!-- Affichage de toutes les réponses possibles -->
         <table>
