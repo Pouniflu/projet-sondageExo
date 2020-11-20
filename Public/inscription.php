@@ -30,9 +30,9 @@ use Core\Database;
 
                                 if($mdp == $mdp2) {
 
-                                    // $insertmbr = $pdo->prepare("INSERT INTO t_utilisateurs(lastName, firstName, pseudo, email, mdp) VALUES(?, ?, ?, ?, ?)");
-                                    // $insertmbr->execute(array($lastName, $firstName, $pseudo, $email, $mdp));
-                                    // $erreur = "Votre compte a bien été créé";
+                                    $insertmbr = $pdo->prepare("INSERT INTO t_utilisateurs(lastName, firstName, pseudo, email, mdp) VALUES(?, ?, ?, ?, ?)");
+                                    $insertmbr->execute(array($lastName, $firstName, $pseudo, $email, $mdp));
+                                    $erreur = "Votre compte a bien été créé";
 
                                 } else {
                                     $erreur = "Vos mdp sont différents";
