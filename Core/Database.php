@@ -17,7 +17,7 @@ class Database{
             $this->dbname = $dbConfig["dbname"];
             $this->user = $dbConfig["user"];
             $this->pass = $dbConfig["pass"];
-            $this->pdo = new \PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
+            $this->pdo = new \PDO("mysql:host=$this->host;dbname=$this->dbname;charset=UTF8", $this->user, $this->pass);
         } catch (\PDOException $e) {
             return $e->getMessage();
         }

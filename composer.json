@@ -1,0 +1,13 @@
+{
+    "name": "malo-claire-nicolas/projet-sondage",
+    "description": "Projet a rendre",
+    "type": "project",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Core\\":"Core/"
+        }
+    },
+    "require": {}
+}
