@@ -10,7 +10,7 @@
         <h2>Résultat du sondage</h2>
 
         <!-- Affichage de la question --> 
-        <p><?php $question?></p>
+        <p><?php echo $question[0]['question']?></p>
 
         <!-- Affichage de toutes les réponses possibles -->
         <table>
@@ -23,7 +23,7 @@
             <tbody>
                 <?php foreach ($answers as $answer):?>
                 <tr>
-                    <th><?= $answer->réponse?></th>
+                    <th><?= $answer->reponse?></th>
                     <th>10%</th>
                 </tr>
                 <?php endforeach; ?>

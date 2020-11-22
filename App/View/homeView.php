@@ -51,4 +51,7 @@
             </table>
         </section>
 
+        <!-- Accès page création de sondage -->
+        <p><a href="<?php ROOT."\\vendor\\autoload.php"?>">Créer un sondage</a></p>
+
 <?php include 'footer.php'?>

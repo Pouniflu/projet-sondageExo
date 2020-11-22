@@ -14,18 +14,17 @@ class ResultPollModel extends Database {
         
         $query->execute(array($_GET['sondage_id']));
 
-        return $query->fetchAll(\PDO::FETCH_OBJ);
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     public function getAnswersPoll(){
         $query = $this->pdo->prepare(
-            "SELECT réponse 
+            "SELECT reponse 
             FROM t_reponses
             WHERE sondage_id = ?"
             );
         
         $query->execute(array($_GET['sondage_id']));
-
         return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 }

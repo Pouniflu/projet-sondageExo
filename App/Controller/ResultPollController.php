@@ -10,7 +10,7 @@ class ResultPollController {
         $this->model = new ResultPollModel();
     }
 
-    public function renderIndex(){
+    public function renderIndex() {
         $question = $this->model->getQuestionPoll();
         $answers = $this->model->getAnswersPoll();
         require ROOT."/App/View/resultPollView.php";

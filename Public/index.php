@@ -5,11 +5,6 @@ use App\Controller\ResultPollController;
 define("ROOT", dirname(__DIR__));
 require ROOT."\\vendor\\autoload.php";
 
-// Instanciation de la classe HomeController
-// On lui applique ensuite la méthode renderIndex() qui provient du controller : ça permet de faire le lien avec la view
-$homeController = new HomeController();
-$homeController->renderIndex();
+header('Content-Type: text/html; charset=UTF-8');
 
-// Instanciation de la classe PollControler
-$resultPollController = new ResultPollController();
-$resultPollController->renderIndex();
+require ROOT."/router.php";
