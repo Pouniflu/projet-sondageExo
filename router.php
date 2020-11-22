@@ -26,14 +26,8 @@ if(array_key_exists("page", $_GET)){
             $controller->renderIndex();
             break;
         case 'signIn':
-
-            if(isset($_POST["lastName"])){
-                $controller = new SignInController();
-                $controller->createUser();
-            } else {
-                $controller = new SignInController();
-                $controller->renderIndex();
-            }
+            $controller = new SignInController();
+            $controller->renderIndex();
             break;
         default:
             # code...

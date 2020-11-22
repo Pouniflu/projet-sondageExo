@@ -14,7 +14,7 @@ use App\Controller\SignInController;
 <div>
     <h1>Inscription</h1>
 
-    <form method="POST" action="?page=signIn&action=create">
+    <form method="POST" action="">
         <table>
 
             <tr>
@@ -89,7 +89,7 @@ use App\Controller\SignInController;
 
         </table>
     </form>
-
+    <p><?php echo $erreur ?><p>
 </div>
 
 </body>
