@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23af70ea-a115-4a72-b0b0-488f077bfc47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/projet-sondageExo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet-sondageExo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controller/SignInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/SignInController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Model/SignInModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/SignInModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/View/SignInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/SignInView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
-    </list>
+    <list default="true" id="23af70ea-a115-4a72-b0b0-488f077bfc47" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606073776461</updated>
       <workItem from="1606073778181" duration="9434000" />
-      <workItem from="1606084185140" duration="3243000" />
+      <workItem from="1606084185140" duration="3713000" />
     </task>
     <servers />
   </component>
@@ -100,10 +92,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="38" y="92" width="1258" height="676" key="MergeDialog" timestamp="1606093110983">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="38" y="92" width="1258" height="676" key="MergeDialog/0.25.1440.810@0.25.1440.810" timestamp="1606093110983" />
+    <state x="358" y="195" key="MultipleFileMergeDialog" timestamp="1606093117872">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="358" y="195" key="MultipleFileMergeDialog/0.25.1440.810@0.25.1440.810" timestamp="1606093117872" />
     <state x="229" y="66" key="SettingsEditor" timestamp="1606092582126">
       <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="229" y="66" key="SettingsEditor/0.25.1440.810@0.25.1440.810" timestamp="1606092582126" />
+    <state x="367" y="192" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1606093089045">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="367" y="192" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.25.1440.810@0.25.1440.810" timestamp="1606093089045" />
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1606093132617">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1606093132617" />
     <state x="385" y="159" width="670" height="676" key="search.everywhere.popup" timestamp="1606074962112">
       <screen x="0" y="25" width="1440" height="810" />
     </state>
