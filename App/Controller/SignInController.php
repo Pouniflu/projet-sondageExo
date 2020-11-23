@@ -2,7 +2,6 @@
 namespace App\Controller;
 use App\Model\SignInModel;
 
-// Création d'une classe PollController permettant de controler la page de résultat d'un sondage
 class SignInController {
 
     public function __construct()
@@ -18,8 +17,6 @@ class SignInController {
     public function createUser() {
 
         $message = $this->model->signInUser();
-
-        require ROOT."/App/View/LogInView.php";
         return $message;
 
     }

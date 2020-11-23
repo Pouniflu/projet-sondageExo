@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23af70ea-a115-4a72-b0b0-488f077bfc47" name="Default Changelist" comment="gitignore upd">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Model/LogInModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/SignInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/SignInController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Model/SignInModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/SignInModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/View/LogInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/LogInView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/View/SignInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/SignInView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/LogInController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +78,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="LogInView.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/App/View/LogInView.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.LogInView.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606073776461</updated>
       <workItem from="1606073778181" duration="9434000" />
-      <workItem from="1606084185140" duration="4481000" />
+      <workItem from="1606084185140" duration="6533000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore upd">
       <created>1606093518280</created>
@@ -119,6 +136,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="gitignore upd" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="394" y="77" key="#PHP" timestamp="1606095526268">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="394" y="77" key="#PHP/0.25.1440.810@0.25.1440.810" timestamp="1606095526268" />
+    <state x="509" y="212" key="#Web_Browsers" timestamp="1606095395385">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="509" y="212" key="#Web_Browsers/0.25.1440.810@0.25.1440.810" timestamp="1606095395385" />
     <state x="38" y="92" width="1258" height="676" key="MergeDialog" timestamp="1606093110983">
       <screen x="0" y="25" width="1440" height="810" />
     </state>

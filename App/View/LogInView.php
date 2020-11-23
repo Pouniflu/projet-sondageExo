@@ -6,6 +6,32 @@
     <title>Log In</title>
 </head>
 <body>
-    <h1>Test</h1>
+<form method="POST" action="?">
+    <table>
+
+        <tr>
+            <td>
+                <label for="pseudo">Pseudo :</label>
+            </td>
+            <td>
+                <input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="password">Password :</label>
+            </td>
+            <td>
+                <input type="text" placeholder="Votre Mot de Passe" id="password" name="password">
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="formConnexion" value="Je me connecte !">
+            </td>
+        </tr>
 </body>
 </html>

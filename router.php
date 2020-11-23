@@ -34,6 +34,9 @@ if(array_key_exists("page", $_GET)){
             }
             $controller->renderIndex($message);
             break;
+        case 'logIn':
+            $controller = new LogInController();
+            $controller->renderIndex();
         default:
             # code...
             break;
