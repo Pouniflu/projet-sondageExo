@@ -38,7 +38,7 @@ class SignInModel extends Database {
                                         if (!$catch) {
                                             return "Ce pseudo est déjà utilisé";
                                         }
-                                        header("location: ?page=LogInView.php");
+                                        header("location: ?page=logIn");
 
                                     } else {
                                         return "Vos mdp sont différents";

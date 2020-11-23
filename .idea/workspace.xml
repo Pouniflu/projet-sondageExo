@@ -19,15 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23af70ea-a115-4a72-b0b0-488f077bfc47" name="Default Changelist" comment="gitignore upd">
-      <change afterPath="$PROJECT_DIR$/App/Model/LogInModel.php" afterDir="false" />
+    <list default="true" id="23af70ea-a115-4a72-b0b0-488f077bfc47" name="Default Changelist" comment="mise en place log in MVC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controller/SignInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/SignInController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/LogInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/LogInController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Model/SignInModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/SignInModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/View/LogInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/LogInView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/View/SignInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/SignInView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/LogInController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +30,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -75,7 +70,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -97,7 +92,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606073776461</updated>
       <workItem from="1606073778181" duration="9434000" />
-      <workItem from="1606084185140" duration="6533000" />
+      <workItem from="1606084185140" duration="6912000" />
+      <workItem from="1606096435047" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore upd">
       <created>1606093518280</created>
@@ -113,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606093892901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mise en place log in MVC">
+      <created>1606096067561</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606096067561</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore upd" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore upd" />
+    <MESSAGE value="mise en place log in MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en place log in MVC" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="77" key="#PHP" timestamp="1606095526268">
@@ -152,18 +156,22 @@
       <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="358" y="195" key="MultipleFileMergeDialog/0.25.1440.810@0.25.1440.810" timestamp="1606093117872" />
-    <state x="229" y="66" key="SettingsEditor" timestamp="1606092582126">
+    <state x="0" y="25" width="1440" height="810" key="SettingsEditor" timestamp="1606096495767">
       <screen x="0" y="25" width="1440" height="810" />
     </state>
-    <state x="229" y="66" key="SettingsEditor/0.25.1440.810@0.25.1440.810" timestamp="1606092582126" />
+    <state x="0" y="25" width="1440" height="810" key="SettingsEditor/0.25.1440.810@0.25.1440.810" timestamp="1606096495767" />
     <state x="367" y="192" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1606093089045">
       <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="367" y="192" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.25.1440.810@0.25.1440.810" timestamp="1606093089045" />
-    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1606093896467">
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1606096071544">
       <screen x="0" y="25" width="1440" height="810" />
     </state>
-    <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1606093896467" />
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1606096071544" />
+    <state x="385" y="193" key="run.anything.popup" timestamp="1606096161918">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="385" y="193" key="run.anything.popup/0.25.1440.810@0.25.1440.810" timestamp="1606096161918" />
     <state x="385" y="159" width="670" height="676" key="search.everywhere.popup" timestamp="1606074962112">
       <screen x="0" y="25" width="1440" height="810" />
     </state>

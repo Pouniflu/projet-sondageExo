@@ -10,15 +10,14 @@ class LogInController {
         $this->model = new LogInModel();
     }
 
-    public function renderIndex($message) {
+    public function renderIndex() {
 
         require ROOT."/App/View/LogInView.php";
     }
 
     public function LogUser() {
 
-        $message = $this->model->LogInUser();
-        return $message;
+        $this->model->LogInUser();
 
     }
 }

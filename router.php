@@ -10,6 +10,7 @@ use App\Controller\HomeController;
 use App\Controller\ResultPollController;
 use App\Controller\CreatePollController;
 use App\Controller\SignInController;
+use App\Controller\LogInController;
 
 
 if(array_key_exists("page", $_GET)){
