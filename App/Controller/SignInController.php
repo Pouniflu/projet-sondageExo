@@ -10,16 +10,17 @@ class SignInController {
         $this->model = new SignInModel();
     }
 
-    public function renderIndex() {
+    public function renderIndex($message) {
 
         require ROOT."/App/View/SignInView.php";
     }
 
     public function createUser() {
 
-        $this->model->signInUser();
+        $message = $this->model->signInUser();
 
         require ROOT."/App/View/LogInView.php";
+        return $message;
 
     }
 }

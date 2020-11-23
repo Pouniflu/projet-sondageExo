@@ -11,6 +11,7 @@ use App\Controller\ResultPollController;
 use App\Controller\CreatePollController;
 use App\Controller\SignInController;
 
+
 if(array_key_exists("page", $_GET)){
     switch ($_GET["page"]) {
         case 'home':
@@ -26,14 +27,12 @@ if(array_key_exists("page", $_GET)){
             $controller->renderIndex();
             break;
         case 'signIn':
-
+            $message = null;
+            $controller = new SignInController();
             if(isset($_POST["lastName"])){
-                $controller = new SignInController();
-                $controller->createUser();
-            } else {
-                $controller = new SignInController();
-                $controller->renderIndex();
+                $message = $controller->createUser();
             }
+            $controller->renderIndex($message);
             break;
         default:
             # code...

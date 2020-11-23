@@ -1,5 +1,9 @@
 <?php
-use App\Controller\SignInController;
+
+/**
+ * @var $message;
+ */
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +18,7 @@ use App\Controller\SignInController;
 <div>
     <h1>Inscription</h1>
 
-    <form method="POST" action="?page=signIn&action=create">
+    <form method="POST" action="?page=signIn">
         <table>
 
             <tr>
@@ -64,19 +68,19 @@ use App\Controller\SignInController;
 
             <tr>
                 <td>
-                    <label for="mdp">Mot de Passe</label>
+                    <label for="password">Mot de Passe</label>
                 </td>
                 <td>
-                    <input type="password" placeholder="Votre mot de passe" id="mdp" name="mdp">
+                    <input type="password" placeholder="Votre mot de passe" id="password" name="password">
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <label for="mdp2">Confirmation Mot de Passe :</label>
+                    <label for="password2">Confirmation Mot de Passe :</label>
                 </td>
                 <td>
-                    <input type="password" placeholder="Confirmer votre mdp" id="mdp2" name="mdp2">
+                    <input type="password" placeholder="Confirmer votre mdp" id="password2" name="password2">
                 </td>
             </tr>
 
@@ -86,6 +90,9 @@ use App\Controller\SignInController;
                     <input type="submit" name="formInscription" value="Je m'inscris !">
                 </td>
             </tr>
+            <?php if (!is_null($message)) { ?>
+                <p><?php echo $message ?></p>
+            <?php  } ?>
 
         </table>
     </form>

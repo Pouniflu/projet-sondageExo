@@ -1,6 +1,7 @@
 <?php
 use App\Controller\HomeController;
 use App\Controller\ResultPollController;
+use App\Controller\SignInController;
 
 define("ROOT", dirname(__DIR__));
 require ROOT."/vendor/autoload.php";

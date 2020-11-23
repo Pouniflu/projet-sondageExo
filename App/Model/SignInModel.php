@@ -15,12 +15,11 @@ class SignInModel extends Database {
                 "pseudo" => htmlspecialchars($_POST['pseudo']),
                 "email" => htmlspecialchars($_POST['email']),
                 "email2" => htmlspecialchars($_POST['email2']),
-                "mdp" => password_hash($_POST['mdp'], PASSWORD_BCRYPT),
-                "mdp2" => password_hash($_POST['mdp2'], PASSWORD_BCRYPT),
+                "password" => password_hash($_POST['password'], PASSWORD_BCRYPT),
+                "password2" => password_hash($_POST['password2'], PASSWORD_BCRYPT),
             ];
 
-            if(!empty($_POST['lastName']) AND !empty($_POST['firstName']) AND !empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['email2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
-
+            if(!empty($_POST['lastName']) AND !empty($_POST['firstName']) AND !empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['email2']) AND !empty($_POST['password']) AND !empty($_POST['password2'])) {
                 $lastNamelength = strlen($userData["lastName"]);
                 $firstNamelength = strlen($userData["firstName"]);
                 $pseudolength = strlen($userData["pseudo"]);
@@ -33,37 +32,39 @@ class SignInModel extends Database {
 
                                 if(filter_var($userData["email"], FILTER_VALIDATE_EMAIL)) {
 
-                                    if($userData["mdp"] == $userData["mdp2"]) {
-
-                                        $insertmbr = $this->prepare("INSERT INTO t_utilisateurs(lastName, firstName, pseudo, email, mdp) VALUES(?, ?, ?, ?, ?)");
-                                        $insertmbr->execute(array($userData["lastName"], $userData["firstName"], $userData["pseudo"], $userData["email"], $userData["mdp"]));
-                                        $erreur = "Votre compte a bien été créé";
+                                    if($_POST["password"] == $_POST["password2"]) {
+                                        $insertmbr = $this->pdo->prepare("INSERT INTO t_utilisateurs(lastName, firstName, pseudo, email, password) VALUES(?, ?, ?, ?, ?)");
+                                        $catch = $insertmbr->execute(array($userData["lastName"], $userData["firstName"], $userData["pseudo"], $userData["email"], $userData["password"]));
+                                        if (!$catch) {
+                                            return "Ce pseudo est déjà utilisé";
+                                        }
+                                        return "Votre compte a bien été créé";
 
                                     } else {
-                                        $erreur = "Vos mdp sont différents";
+                                        return "Vos mdp sont différents";
                                     }
                                 } else {
-                                    $erreur = "Ton adresse mail n'est pas valide !";
+                                    return "Ton adresse mail n'est pas valide !";
                                 }
 
                             } else {
-                                $erreur = "Vos adresses emails sont différentes";
+                                return "Vos adresses emails sont différentes";
                             }
 
                         } else {
-                            $erreur = "Votre pseudo ne doit pas dépasser 60 caractères";
+                            return "Votre pseudo ne doit pas dépasser 60 caractères";
                         }
                     } else {
-                        $erreur = "Votre Prénom ne doit pas dépasser 65 caractères";
+                        return "Votre Prénom ne doit pas dépasser 65 caractères";
                     }
                 } else {
-                    $erreur = "Votre Nom ne doit pas dépasser 60 caractères";
+                    return "Votre Nom ne doit pas dépasser 60 caractères";
                 }
 
 
 
             } else {
-                $erreur = "*Tous les champs doivent être complétés";
+                return "*Tous les champs doivent être complétés";
             }
         }
 
