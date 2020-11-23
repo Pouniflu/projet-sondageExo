@@ -17,7 +17,8 @@ class LogInController {
 
     public function LogUser() {
 
-        $this->model->LogInUser();
+        $message = $this->model->logInUser();
+        return $message;
 
     }
 }

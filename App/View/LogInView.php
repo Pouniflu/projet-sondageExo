@@ -14,7 +14,7 @@
                 <label for="pseudo">Pseudo :</label>
             </td>
             <td>
-                <input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>">
+                <input type="text" placeholder="Pseudo" id="pseudo" name="pseudoConnect" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>">
             </td>
         </tr>
 
@@ -23,7 +23,7 @@
                 <label for="password">Password :</label>
             </td>
             <td>
-                <input type="text" placeholder="Votre Mot de Passe" id="password" name="password">
+                <input type="text" placeholder="Votre Mot de Passe" id="password" name="passwordConnect">
             </td>
         </tr>
 
