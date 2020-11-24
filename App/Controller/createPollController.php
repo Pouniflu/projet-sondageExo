@@ -2,6 +2,7 @@
 namespace App\Controller;
 use App\Model\CreatePollModel;
 
+// Création d'une classe Create Poll Controler
 class CreatePollController {
 
     public function __construct()
@@ -10,7 +11,7 @@ class CreatePollController {
     }
 
     public function renderIndex() {
-        $test = $this->model->createPoll();
+        $createPollMessage = $this->model->createPoll();
         require ROOT."/App/View/createPollView.php";
     }
 

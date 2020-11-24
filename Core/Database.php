@@ -22,4 +22,24 @@ class Database{
             return $e->getMessage();
         }
     }
+
+    // Set up query request function
+
+    public function query(string $statement, bool $one)
+    {
+        $query = $this->pdo->query($statement);
+        if ($one === false) {
+            return $query->fetch(\PDO::FETCH_ASSOC);
+        } else {
+            return $query->fetchAll(\PDO::FETCH_ASSOC);
+        }
+    }
+
+    // Set up prepare request function
+
+    public function prepare(string $statement, array $data = array())
+    {
+        $prepare = $this->pdo->prepare($statement);
+        $prepare->execute($data);
+    }
 }

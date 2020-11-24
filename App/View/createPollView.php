@@ -19,5 +19,7 @@
             <p>Durée <input type="time" name="duree"></p>
             <button id="sendData" name="createPoll">Valider le sondage</button>
         </form>
+        <!-- Message pour avertir l'utilisateur si son sondage a bien été enregistré ou non -->
+        <p><?php echo $createPollMessage ?></p>
 
 <?php include 'footer.php'?>
