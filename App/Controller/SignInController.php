@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Model\SignInModel;
 
-// Création d'une classe PollController permettant de controler la page de résultat d'un sondage
+// Création d'une classe SignInController permettant de controler l'inscription d'un utilisateur
 class SignInController {
 
     public function __construct()

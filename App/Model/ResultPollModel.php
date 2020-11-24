@@ -2,7 +2,7 @@
 namespace App\Model;
 use Core\Database;
 
-// La classe HomeModel permet de faire le lien entre le bdd et le controller
+// La classe ResultPollModel permet de faire le lien entre le bdd et le controller
 class ResultPollModel extends Database {
 
     public function getQuestionPoll(){

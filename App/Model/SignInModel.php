@@ -1,14 +1,15 @@
 <?php
-
 namespace App\Model;
-
 use Core\Database;
 
+// La classe SignInModel permet de faire le lien entre le bdd et le controller
 class SignInModel extends Database {
 
+    // Creation d'une fonction signInUser
     public function signInUser(){
         if(isset($_POST['formInscription']))
         {
+            // Creation d'un array avec toutes les informations que l'utilisateur doit saisir pour s'inscrire
             $userData = [
                 "firstName" => htmlspecialchars($_POST['firstName']),
                 "lastName" => htmlspecialchars($_POST['lastName']),
@@ -24,6 +25,7 @@ class SignInModel extends Database {
                 $firstNamelength = strlen($userData["firstName"]);
                 $pseudolength = strlen($userData["pseudo"]);
 
+                // Vérification à chaque information si l'utilisateur respecte bien les critères
                 if($lastNamelength <= 60){
                     if($firstNamelength <= 65) {
                         if($pseudolength <= 60){
@@ -46,11 +48,9 @@ class SignInModel extends Database {
                                 } else {
                                     return "Ton adresse mail n'est pas valide !";
                                 }
-
                             } else {
                                 return "Vos adresses emails sont différentes";
                             }
-
                         } else {
                             return "Votre pseudo ne doit pas dépasser 60 caractères";
                         }
@@ -60,13 +60,9 @@ class SignInModel extends Database {
                 } else {
                     return "Votre Nom ne doit pas dépasser 60 caractères";
                 }
-
-
-
             } else {
                 return "*Tous les champs doivent être complétés";
             }
         }
-
     }
 }

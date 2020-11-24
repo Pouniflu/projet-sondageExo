@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Model\ResultPollModel;
 
-// Création d'une classe PollController permettant de controler la page de résultat d'un sondage
+// Création d'une classe ResultPollController permettant de controler la page de résultat d'un sondage
 class ResultPollController {
 
     public function __construct()
