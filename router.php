@@ -10,6 +10,7 @@ use App\Controller\HomeController;
 use App\Controller\ResultPollController;
 use App\Controller\CreatePollController;
 use App\Controller\SignInController;
+use App\Controller\LogInController;
 
 
 if(array_key_exists("page", $_GET)){
@@ -33,6 +34,13 @@ if(array_key_exists("page", $_GET)){
                 $message = $controller->createUser();
             }
             $controller->renderIndex($message);
+            break;
+        case 'logIn':
+            $controller = new LogInController();
+            if(isset($_POST["pseudoConnect"])){
+                $controller->LogUser();
+            }
+            $controller->renderIndex();
             break;
         default:
             # code...

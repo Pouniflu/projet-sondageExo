@@ -18,8 +18,6 @@ class SignInController {
     public function createUser() {
 
         $message = $this->model->signInUser();
-
-        require ROOT."/App/View/LogInView.php";
         return $message;
 
     }
