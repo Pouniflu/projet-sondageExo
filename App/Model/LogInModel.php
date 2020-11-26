@@ -14,17 +14,22 @@ class LogInModel extends Database {
 
         if (isset($_POST['formConnexion'])) {
             $pseudoconnect = htmlspecialchars($_POST['pseudoConnect']);
-            $passwordconnect = password_hash($_POST['passwordConnect'], PASSWORD_BCRYPT);
+            $passwordconnect = htmlspecialchars($_POST['passwordConnect']);
             if (!empty($pseudoconnect) and !empty($passwordconnect)) {
-                $requser = $this->pdo->prepare("SELECT * FROM t_utilisateurs WHERE pseudo = ? AND password = ?");
-                $requser->execute(array($pseudoconnect, $passwordconnect));
+                $requser = $this->pdo->prepare("SELECT * FROM t_utilisateurs WHERE pseudo = ?");
+                $requser->execute(array($pseudoconnect));
                 $userexist = $requser->rowCount();
                 if ($userexist == 1) {
                     $userinfo = $requser->fetch();
-                    $_SESSION['id'] = $userinfo['id'];
-                    $_SESSION['pseudo'] = $userinfo['pseudo'];
-                    $_SESSION['password'] = $userinfo['password'];
-                    header("Location: ?page=home");
+                    if (password_verify($passwordconnect, $userinfo["password"])){
+                        $_SESSION['id'] = $userinfo['id'];
+                        $_SESSION['pseudo'] = $userinfo['pseudo'];
+                        $_SESSION['password'] = $userinfo['password'];
+                        header("Location: ?page=home");
+                    } else {
+                        $message = "Mauvais Mot de Passe !";
+                    }
+
                 } else {
                     $message = "Mauvais pseudo ou mot de passe !";
                 }

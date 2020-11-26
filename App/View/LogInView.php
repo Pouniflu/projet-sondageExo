@@ -6,7 +6,7 @@
     <title>Log In</title>
 </head>
 <body>
-<form method="POST" action="?">
+<form method="POST" action="">
     <table>
 
         <tr>

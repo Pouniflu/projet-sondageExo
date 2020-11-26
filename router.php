@@ -37,7 +37,11 @@ if(array_key_exists("page", $_GET)){
             break;
         case 'logIn':
             $controller = new LogInController();
+            if(isset($_POST["pseudoConnect"])){
+                $controller->LogUser();
+            }
             $controller->renderIndex();
+            break;
         default:
             # code...
             break;
