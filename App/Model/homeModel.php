@@ -7,7 +7,9 @@ class HomeModel extends Database {
 
     public function getPolls(){
         $db = new Database;
-        $query = $this->pdo->query("SELECT * FROM t_sondages");
+        $query = $this->pdo->query(
+            "SELECT * 
+            FROM t_sondages");
         return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 }
