@@ -37,9 +37,5 @@ class LogInModel extends Database {
                 $message = "Tous les champs doivent être complétés !";
             }
         }
-
-
     }
-
-
 }
