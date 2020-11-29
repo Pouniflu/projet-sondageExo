@@ -52,6 +52,12 @@
         </section>
 
         <!-- Accès page création de sondage -->
-        <p><a href="<?php ROOT."\\vendor\\autoload.php"?>">Créer un sondage</a></p>
+        <p><a href="?page=createPoll">Créer un sondage</a></p>
+
+        <!-- Se connecter -->
+        <p><a href="?page=logIn">Se connecter</a></p>
+
+        <!-- S'inscrire -->
+        <p><a href="?page=signIn">S'inscrire</a></p>
 
 <?php include 'footer.php'?>
