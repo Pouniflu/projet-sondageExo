@@ -25,7 +25,7 @@
                     <tr>
                         <th><?= $poll->creator_id?></th>
                         <th><?= $poll->question ?></th>
-                        <th><a href="?page=resultPollView&sondage_id=<?php ?>"></a></th>
+                        <th><a href="?page=results&sondage_id=<?= $poll->sondage_id ?>">Lien</a></th>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
