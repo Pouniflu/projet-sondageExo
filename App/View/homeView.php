@@ -8,7 +8,9 @@
     <body>
         <!-- Titre -->
         <h1>Page d'accueil</h1>
+
         
+
         <!-- Affichage des sondages en cours des amis -->
         <h2>Sondages en cours de mes amis</h2>
         <section class="Ongoing">
