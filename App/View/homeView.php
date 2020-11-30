@@ -62,4 +62,6 @@
         <!-- S'inscrire -->
         <p><a href="?page=signIn">S'inscrire</a></p>
 
+        <p><a href="?page=profil">Profil</a></p>
+
 <?php include 'footer.php'?>
