@@ -23,7 +23,7 @@
                 <label for="password">Password :</label>
             </td>
             <td>
-                <input type="text" placeholder="Votre Mot de Passe" id="password" name="passwordConnect">
+                <input type="password" placeholder="Votre Mot de Passe" id="password" name="passwordConnect">
             </td>
         </tr>
 
