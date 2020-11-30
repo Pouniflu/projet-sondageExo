@@ -11,6 +11,7 @@ use App\Controller\ResultPollController;
 use App\Controller\CreatePollController;
 use App\Controller\SignInController;
 use App\Controller\LogInController;
+use App\Controller\profilController;
 
 
 if(array_key_exists("page", $_GET)){
@@ -40,6 +41,10 @@ if(array_key_exists("page", $_GET)){
             if(isset($_POST["pseudoConnect"])){
                 $controller->LogUser();
             }
+            $controller->renderIndex();
+            break;
+        case 'profil':
+            $controller = new profilController();
             $controller->renderIndex();
             break;
         default:

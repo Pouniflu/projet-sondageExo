@@ -22,10 +22,13 @@ class LogInModel extends Database {
                 if ($userexist == 1) {
                     $userinfo = $requser->fetch();
                     if (password_verify($passwordconnect, $userinfo["password"])){
-                        $_SESSION['id'] = $userinfo['id'];
+                        $_SESSION['user_id'] = $userinfo['user_id'];
                         $_SESSION['pseudo'] = $userinfo['pseudo'];
+                        $_SESSION['firstName'] = $userinfo['firstName'];
+                        $_SESSION['lastName'] = $userinfo['lastName'];
+                        $_SESSION['email'] = $userinfo['email'];
                         $_SESSION['password'] = $userinfo['password'];
-                        header("Location: ?page=home");
+                        header("Location: ?page=profil");
                     } else {
                         $message = "Mauvais Mot de Passe !";
                     }
