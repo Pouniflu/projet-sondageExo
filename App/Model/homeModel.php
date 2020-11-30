@@ -7,10 +7,17 @@ class HomeModel extends Database {
 
     public function getPolls(){
 
+        // On lance la session pour récupérer les informations de l'utilisateur connecté
+        session_start();
+
+        $userID = $_SESSION['user_id'];
         $db = new Database;
-        $query = $this->pdo->query(
+        $query = $this->pdo->prepare(
             "SELECT * 
-            FROM t_sondages");
+            FROM t_sondages
+            WHERE creator_id = ?");
+        $query->execute(array($userID));
+
         return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 }

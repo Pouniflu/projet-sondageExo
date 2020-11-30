@@ -21,8 +21,8 @@ class CreatePollModel extends Database {
                
                 // Injection SQL : envoi de la question et de la durée dans la table t_sondages
                 $sendQuestion = $this->pdo->prepare(
-                    "INSERT INTO t_sondages (creator_id, question, time)
-                    VALUE (1, ?, ?)
+                    "INSERT INTO t_sondages (creator_id, question, duree)
+                    VALUE (30, ?, ?)
                 ");
                 $sendQuestion->execute(array($_POST['question'], $_POST['duree']));
 
