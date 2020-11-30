@@ -30,14 +30,14 @@ class LogInModel extends Database {
                         $_SESSION['password'] = $userinfo['password'];
                         header("Location: ?");
                     } else {
-                        $message = "Mauvais Mot de Passe !";
+                        echo "Mauvais Mot de Passe !";
                     }
 
                 } else {
-                    $message = "Mauvais pseudo ou mot de passe !";
+                    echo "Mauvais pseudo ou mot de passe !";
                 }
             } else {
-                $message = "Tous les champs doivent être complétés !";
+                echo "Tous les champs doivent être complétés !";
             }
         }
     }
