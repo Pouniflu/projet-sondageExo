@@ -16,7 +16,10 @@ class LogInModel extends Database {
             $pseudoconnect = htmlspecialchars($_POST['pseudoConnect']);
             $passwordconnect = htmlspecialchars($_POST['passwordConnect']);
             if (!empty($pseudoconnect) and !empty($passwordconnect)) {
-                $requser = $this->pdo->prepare("SELECT * FROM t_utilisateurs WHERE pseudo = ?");
+                $requser = $this->pdo->prepare(
+                    "SELECT * 
+                    FROM t_utilisateurs 
+                    WHERE pseudo = ?");
                 $requser->execute(array($pseudoconnect));
                 $userexist = $requser->rowCount();
                 if ($userexist == 1) {
@@ -28,7 +31,7 @@ class LogInModel extends Database {
                         $_SESSION['lastName'] = $userinfo['lastName'];
                         $_SESSION['email'] = $userinfo['email'];
                         $_SESSION['password'] = $userinfo['password'];
-                        header("Location: ?");
+                        header("?page=profil");
                     } else {
                         $message = "Mauvais Mot de Passe !";
                     }

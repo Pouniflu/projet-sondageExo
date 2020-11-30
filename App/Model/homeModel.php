@@ -10,9 +10,7 @@ class HomeModel extends Database {
         $db = new Database;
         $query = $this->pdo->query(
             "SELECT * 
-            FROM t_sondages
-            WHERE creator_id = ?");
-        $query->execute(array($_SESSION['user_id']));
+            FROM t_sondages");
         return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 }
