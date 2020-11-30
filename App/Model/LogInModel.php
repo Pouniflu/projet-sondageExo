@@ -28,7 +28,7 @@ class LogInModel extends Database {
                         $_SESSION['lastName'] = $userinfo['lastName'];
                         $_SESSION['email'] = $userinfo['email'];
                         $_SESSION['password'] = $userinfo['password'];
-                        header("Location: ?page=profil");
+                        header("Location: ?");
                     } else {
                         $message = "Mauvais Mot de Passe !";
                     }
