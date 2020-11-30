@@ -91,7 +91,7 @@
                 </td>
             </tr>
             <?php if (!is_null($message)) { ?>
-                <p><?php echo $message ?></p>
+                <p><?= $message ?></p>
             <?php  } ?>
 
         </table>
