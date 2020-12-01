@@ -36,6 +36,12 @@
                 </tbody>
             </table>
 
+            <div>
+                <button id="sendVote1">Je vote pour le choix 1</button><div id="result1"></div>
+                <button id="sendVote2">Je vote pour le choix 2</button><div id="result2"></div>
+                <button id="sendVote3">Je vote pour le choix 3</button><div id="result3"></div>
+                <button id="sendVote4">Je vote pour le choix 4</button><div id="result4"></div>
+            </div>
             <!-- Bouton pour revenir à la page d'accueil -->
             <a href="?">Aller à la page d'accueil</a>
         </main>
