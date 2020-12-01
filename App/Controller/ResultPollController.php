@@ -13,6 +13,7 @@ class ResultPollController {
     public function renderIndex() {
         $question = $this->model->getQuestionPoll();
         $answers = $this->model->getAnswersPoll();
+        $time = $this->model->getTimePoll();
         require ROOT."/App/View/resultPollView.php";
     }
 }

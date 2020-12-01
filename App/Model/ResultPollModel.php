@@ -27,4 +27,15 @@ class ResultPollModel extends Database {
         $query->execute(array($_GET['sondage_id']));
         return $query->fetchAll(\PDO::FETCH_OBJ);
     }
+
+    public function getTimePoll(){
+        $query = $this->pdo->prepare(
+            "SELECT duree 
+            FROM t_sondages
+            WHERE sondage_id = ?"
+            );
+        
+        $query->execute(array($_GET['sondage_id']));
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
