@@ -21,5 +21,7 @@
         </form>
         <!-- Message pour avertir l'utilisateur si son sondage a bien été enregistré ou non -->
         <p><?php echo $createPollMessage ?></p>
+        <!-- Bouton pour revenir à la page d'accueil -->
+        <a href="?">Aller à la page d'accueil</a>
 
 <?php include 'footer.php'?>
