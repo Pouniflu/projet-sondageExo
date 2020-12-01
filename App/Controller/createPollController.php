@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Model\CreatePollModel;
 
-// Création d'une classe Create Poll Controler
+// Création d'une classe CreatePollController permettant de controler la page de création de sondages
 class CreatePollController {
 
     public function __construct()
@@ -14,5 +14,4 @@ class CreatePollController {
         $createPollMessage = $this->model->createPoll();
         require ROOT."/App/View/createPollView.php";
     }
-
 }

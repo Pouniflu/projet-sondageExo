@@ -11,8 +11,6 @@ class HomeController {
     }
 
     public function renderIndex(){
-            // session_start();
-            // $test = $_SESSION['user_id'];
             $polls = $this->model->getPolls();
             require ROOT."/App/View/homeView.php";
     }

@@ -10,14 +10,22 @@ class HomeModel extends Database {
         // On lance la session pour récupérer les informations de l'utilisateur connecté
         session_start();
 
+        // On lance la session pour récupérer les informations de l'utilisateur connecté
         $userID = $_SESSION['user_id'];
+
+        // On appelle la base de données
         $db = new Database;
+
+        // On fait une requête SQL pour chercher les informations à afficher
         $query = $this->pdo->prepare(
-            "SELECT * 
+            "SELECT creator_id, question, t_utilisateurs.pseudo, sondage_id
             FROM t_sondages
-            WHERE creator_id = ?");
+            INNER JOIN t_utilisateurs ON t_utilisateurs.user_id = t_sondages.creator_id
+            WHERE creator_id = ?
+            ORDER BY creator_id");
         $query->execute(array($userID));
 
+        // On return ce qu'on a récupéré
         return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 }

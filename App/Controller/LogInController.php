@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Model\LogInModel;
 
-
+// Création d'une classe LogInController permettant de controler la page de connexion
 class LogInController {
 
     public function __construct()

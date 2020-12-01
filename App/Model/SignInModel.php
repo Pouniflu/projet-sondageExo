@@ -5,11 +5,11 @@ use Core\Database;
 // La classe SignInModel permet de faire le lien entre le bdd et le controller
 class SignInModel extends Database {
 
-    // Creation d'une fonction signInUser
+    // Création d'une fonction signInUser
     public function signInUser(){
         if(isset($_POST['formInscription']))
         {
-            // Creation d'un array avec toutes les informations que l'utilisateur doit saisir pour s'inscrire
+            // Création d'un array avec toutes les informations que l'utilisateur doit saisir pour s'inscrire
             $userData = [
                 "firstName" => htmlspecialchars($_POST['firstName']),
                 "lastName" => htmlspecialchars($_POST['lastName']),
@@ -20,7 +20,10 @@ class SignInModel extends Database {
                 "password2" => password_hash($_POST['password2'], PASSWORD_BCRYPT),
             ];
 
+            // Si les informations récupérées dans les variables ne sont pas vides
             if(!empty($_POST['lastName']) AND !empty($_POST['firstName']) AND !empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['email2']) AND !empty($_POST['password']) AND !empty($_POST['password2'])) {
+                
+                // On récupère dans des variables le nom de famille, prénom et pseudo que l'utilisateur a renseignés
                 $lastNamelength = strlen($userData["lastName"]);
                 $firstNamelength = strlen($userData["firstName"]);
                 $pseudolength = strlen($userData["pseudo"]);
@@ -32,6 +35,7 @@ class SignInModel extends Database {
 
                             if($userData["email"] == $userData["email2"]) {
 
+                                // On vérifie que l'utilisateur à bien mis un email (c'est-à-dire que l'information rentrée contient bien un @)
                                 if(filter_var($userData["email"], FILTER_VALIDATE_EMAIL)) {
 
                                     if($_POST["password"] == $_POST["password2"]) {
@@ -41,7 +45,6 @@ class SignInModel extends Database {
                                             return "Ce pseudo est déjà utilisé";
                                         }
                                         header("location: ?page=logIn");
-
                                     } else {
                                         return "Vos mdp sont différents";
                                     }

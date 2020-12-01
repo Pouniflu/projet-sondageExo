@@ -49,10 +49,10 @@ if(array_key_exists("page", $_GET)){
             $controller = new profilController();
             $controller->renderIndex();
             break;
-        case 'chat':
-            $controller = new ChatController();
-            $controller->renderIndex();
-            break;
+        // case 'chat':
+        //     $controller = new ChatController();
+        //     $controller->renderIndex();
+        //     break;
         default:
             # code...
             break;
@@ -62,14 +62,14 @@ if(array_key_exists("page", $_GET)){
     $controller->renderIndex();
 }
 
-$chat = new Chat();
-if(array_key_exists("function", $_GET)){
-    switch ($_GET["function"]) {
-        case 'postMessage':
-            $chat->postMessage($_POST);
-            break;
-        case 'getMessages':
-            $chat->getMessages();
-            break;
-    }
-}
+// $chat = new Chat();
+// if(array_key_exists("function", $_GET)){
+//     switch ($_GET["function"]) {
+//         case 'postMessage':
+//             $chat->postMessage($_POST);
+//             break;
+//         case 'getMessages':
+//             $chat->getMessages();
+//             break;
+//     }
+// }

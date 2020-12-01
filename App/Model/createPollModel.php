@@ -4,12 +4,15 @@ use Core\Database;
 
 class CreatePollModel extends Database {
 
-    // Creation d'une methode createPoll()
+    // Création d'une méthode createPoll()
     public function createPoll() {
         
         if($_POST) {
 
+            // Récupération de la question posée
             $question = htmlspecialchars($_POST['question']);
+
+            // Récupération de toutes les réponses dans un tableau answers
             $answers = [
                 "answer1" => htmlspecialchars($_POST['answer1']),
                 "answer2" => htmlspecialchars($_POST['answer2']),
