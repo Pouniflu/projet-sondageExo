@@ -7,6 +7,9 @@ class CreatePollModel extends Database {
     // Création d'une méthode createPoll()
     public function createPoll() {
         
+        // On ouvre la session de l'utilisateur connecté pour pouvoir récupérer par la suite ses informations
+        session_start();
+
         if($_POST) {
 
             // Récupération de la question posée
@@ -24,10 +27,10 @@ class CreatePollModel extends Database {
                
                 // Injection SQL : envoi de la question et de la durée dans la table t_sondages
                 $sendQuestion = $this->pdo->prepare(
-                    "INSERT INTO t_sondages (creator_id, question, duree)
-                    VALUE (30, ?, ?)
+                    "INSERT INTO t_sondages (creator_id, question, duree, activite)
+                    VALUE (?, ?, ?, 'open')
                 ");
-                $sendQuestion->execute(array($_POST['question'], $_POST['duree']));
+                $sendQuestion->execute(array($_SESSION['user_id'], $_POST['question'], $_POST['duree']));
 
                 // Select du sondage ID créé
                 // lastInsertId() permet de récupérer le dernier auto-increment inséré dans la table

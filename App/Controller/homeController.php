@@ -11,7 +11,8 @@ class HomeController {
     }
 
     public function renderIndex(){
-            $polls = $this->model->getPolls();
+            $polls = $this->model->getOpenPolls();
+            $closedPolls = $this->model->getClosedPolls();
             require ROOT."/App/View/homeView.php";
     }
 }

@@ -38,10 +38,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($closedPolls as $closedPoll): ?>
                     <tr>
-                        <th></th>
-                        <th></th>
+                        <th><?= $closedPoll->question ?></th>
+                        <th><a href="?page=results&sondage_id=<?= $closedPoll->sondage_id ?>">Lien</a></th>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </section>
