@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* All */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    padding: 0 2vw;
+}
+
+/* Tous les textes */
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Titres de H1 à H3 */
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bold;
+    color: rgb(59, 0, 87);
+    padding: 30px 0;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(129, 9, 9);
+}
+
+/* Tableau */
+table {
+    border-collapse: collapse
+}
+
+th {
+    padding: 0.5vh 5vw;
+    border: solid 1px black;
+}
+
+thead {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-color: rgba(59, 0, 87, 0.157);;
+}
+
+tbody tr th {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Lien */
+a {
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Bouton */
+button {
+    margin: 10px 0;
+    padding: 10px 40px;
+    background: white;
+    border: solid 2px rgb(59, 0, 87);
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Input */
+input {
+    background-color: rgb(238, 238, 238);
+    border: none;
+    width: 15vw;
+    height: 3vh;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+/* Alerte */
+#red {
+    color: red;
+    font-weight: 800;
+}
+
+#vote {
+    font-family: 'Roboto', sans-serif;
+    color: green;
+    font-weight: 800;
+}

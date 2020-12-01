@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Accueil</title>
-    </head>
+<?php include 'header.php'?>
+
     <body>
         <!-- Titre -->
         <h1>Page d'accueil</h1>    
@@ -51,15 +46,23 @@
             </table>
         </section>
 
+        <!-- Titre des liens -->
+        <h2>Liens</h2>
+
         <!-- Accès page création de sondage -->
-        <p><a href="?page=createPoll">Créer un sondage</a></p>
+        <a href="?page=createPoll">Créer un sondage</a>
+        <br>
 
         <!-- Se connecter -->
-        <p><a href="?page=logIn">Se connecter</a></p>
+        <a href="?page=logIn">Se connecter</a>
+        <br>
 
         <!-- S'inscrire -->
-        <p><a href="?page=signIn">S'inscrire</a></p>
+        <a href="?page=signIn">S'inscrire</a>
+        <br>
 
-        <p><a href="?page=profil">Profil</a></p>
+        <!-- Accéder à la page profil -->
+        <a href="?page=profil">Profil</a>
+        <br>
 
 <?php include 'footer.php'?>

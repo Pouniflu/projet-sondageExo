@@ -1,42 +1,39 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Résultat</title>
-    </head>
+<?php include 'header.php'?>
+
     <body>
         <header>
             <!-- Titre -->
-            <h2>Sondage et résultat</h2>
+            <h1>Sondage et résultat</h1>
         </header>
 
         <main>
             <!-- Affichage de la question --> 
-            <p><?php echo $question[0]['question']?></p>
+            <h2><?php echo $question[0]['question']?></h2>
 
             <!-- Affichage du temps --> 
-            <p><?= $time[0]['duree'] ?></p>
+            <p>Durée du sondage : <?= $time[0]['duree'] ?></p>
 
             <!-- Affichage de toutes les réponses possibles -->
             <table>
                 <thead>
                     <tr>
-                        <th>Réponses</th>
-                        <th>Vote</th>
+                        <th>Réponse 1</th>
+                        <th>Réponse 2</th>
+                        <th>Réponse 3</th>
+                        <th>Réponse 4</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($answers as $answer):?>
                     <tr>
+                        <?php foreach ($answers as $answer):?>
                         <th><?= $answer->reponse?></th>
-                        <th><button id="sendVote">Je vote</button></th>
+                        <?php endforeach; ?>
                     </tr>
-                    <?php endforeach; ?>
+
                 </tbody>
             </table>
 
-            <div>
+            <div id="vote">
                 <button id="sendVote1">Je vote pour le choix 1</button><div id="result1"></div>
                 <button id="sendVote2">Je vote pour le choix 2</button><div id="result2"></div>
                 <button id="sendVote3">Je vote pour le choix 3</button><div id="result3"></div>

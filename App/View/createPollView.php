@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Créer un sondage</title>
-    </head>
+<?php include 'header.php'?>
+
     <body>
         <!-- Titre -->
-        <h2>Créer un sondage</h2>
+        <h1>Créer un sondage</h1>
 
+        <!-- Message pour avertir l'utilisateur si son sondage a bien été enregistré ou non -->
+        <p id="red"><?php echo $createPollMessage ?></p>
         <!-- Form pour créer un sondage -->
         <form method="POST">
             <p>Question <input type="text" name="question"></p>
@@ -19,8 +16,6 @@
             <p>Durée <input type="time" name="duree"></p>
             <button id="sendData" name="createPoll">Valider le sondage</button>
         </form>
-        <!-- Message pour avertir l'utilisateur si son sondage a bien été enregistré ou non -->
-        <p><?php echo $createPollMessage ?></p>
         <!-- Bouton pour revenir à la page d'accueil -->
         <a href="?">Aller à la page d'accueil</a>
 

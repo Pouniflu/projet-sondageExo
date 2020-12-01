@@ -6,13 +6,8 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inscription</title>
-    </head>
+<?php include 'header.php'?>
+
     <body>
         <h1>Inscription</h1>
 
@@ -98,9 +93,12 @@
                     </td>
                 </tr>
                 <?php if (!is_null($message)) { ?>
-                    <p><?= $message ?></p>
+                    <p id="red"><?= $message ?></p>
                 <?php  } ?>
             </table>
         </form>
+
+        <!-- Bouton pour revenir à la page d'accueil -->
+        <a href="?">Aller à la page d'accueil</a>
     </body>
 </html>

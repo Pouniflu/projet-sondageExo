@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log In</title>
-    </head>
+<?php include 'header.php'?>
+
     <body>
+
+    <h1>Se connecter</h1>
 
     <!-- Formulaire pour se connecter -->
     <form method="POST" action="">
@@ -38,5 +35,9 @@
                     <input type="submit" name="formConnexion" value="Je me connecte !">
                 </td>
             </tr>
+        </table>
+        
+        <!-- Bouton pour revenir à la page d'accueil -->
+        <a href="?">Aller à la page d'accueil</a>
     </body>
 </html>
