@@ -23,36 +23,42 @@ class CreatePollModel extends Database {
                 "answer4" => htmlspecialchars($_POST['answer4'])
             ];
 
-            if (!empty($_POST['question']) AND !empty($_POST['answer1']) AND !empty($_POST['answer2']) AND !empty($_POST['answer3']) AND !empty($_POST['answer4'])) {
+            if(!empty($_SESSION)) {
+                if (!empty($_POST['question']) AND !empty($_POST['answer1']) AND !empty($_POST['answer2']) AND !empty($_POST['answer3']) AND !empty($_POST['answer4'])) {
                
-                // Injection SQL : envoi de la question et de la durée dans la table t_sondages
-                $sendQuestion = $this->pdo->prepare(
-                    "INSERT INTO t_sondages (creator_id, question, duree, activite)
-                    VALUE (?, ?, ?, 'open')
-                ");
-                $sendQuestion->execute(array($_SESSION['user_id'], $_POST['question'], $_POST['duree']));
-
-                // Select du sondage ID créé
-                // lastInsertId() permet de récupérer le dernier auto-increment inséré dans la table
-                $selectPollID = $this->pdo->lastInsertId();
-
-                // Injection SQL : envoi des réponses dans la table t_reponses
-                $sendAnswers = $this->pdo->prepare(
-                    "INSERT INTO t_reponses (sondage_id, reponse)
-                    VALUE (?, ?)
+                    // Injection SQL : envoi de la question et de la durée dans la table t_sondages
+                    $sendQuestion = $this->pdo->prepare(
+                        "INSERT INTO t_sondages (creator_id, question, duree, activite)
+                        VALUE (?, ?, ?, 'open')
                     ");
-                $sendAnswers->execute(array($selectPollID, $answers['answer1']));
-                $sendAnswers->execute(array($selectPollID, $answers['answer2']));
-                $sendAnswers->execute(array($selectPollID, $answers['answer3']));
-                $sendAnswers->execute(array($selectPollID, $answers['answer4']));
-
-                // Message pour avertir l'utilisateur que le sondage a bien été créé
-                return "Le sondage a bien été créé !";
-
+                    $sendQuestion->execute(array($_SESSION['user_id'], $_POST['question'], $_POST['duree']));
+    
+                    // Select du sondage ID créé
+                    // lastInsertId() permet de récupérer le dernier auto-increment inséré dans la table
+                    $selectPollID = $this->pdo->lastInsertId();
+    
+                    // Injection SQL : envoi des réponses dans la table t_reponses
+                    $sendAnswers = $this->pdo->prepare(
+                        "INSERT INTO t_reponses (sondage_id, reponse)
+                        VALUE (?, ?)
+                        ");
+                    $sendAnswers->execute(array($selectPollID, $answers['answer1']));
+                    $sendAnswers->execute(array($selectPollID, $answers['answer2']));
+                    $sendAnswers->execute(array($selectPollID, $answers['answer3']));
+                    $sendAnswers->execute(array($selectPollID, $answers['answer4']));
+    
+                    // Message pour avertir l'utilisateur que le sondage a bien été créé
+                    return "Le sondage a bien été créé !";
+    
+                } else {
+                    // Message pour avertir l'utilisateur qu'un ou plusieurs champs ne sont pas remplis.
+                    return "Un ou plusieurs champs ne sont pas pas remplis.";
+                }
             } else {
-                // Message pour avertir l'utilisateur qu'un ou plusieurs champs ne sont pas remplis.
-                return "Un ou plusieurs champs ne sont pas pas remplis.";
+                // Message pour avertir l'utilisateur qu'il n'est pas connecté.
+                return "Vous devez d'abord vous connecter !";
             }
+            
         }
     }
 }
