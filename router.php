@@ -11,8 +11,8 @@ use App\Controller\ResultPollController;
 use App\Controller\CreatePollController;
 use App\Controller\SignInController;
 use App\Controller\LogInController;
-use App\Controller\profilController;
-use App\Controller\modifProfilController;
+use App\Controller\ProfilController;
+use App\Controller\ModifProfilController;
 use App\Controller\ChatController;
 use App\Model\ChatModel;
 

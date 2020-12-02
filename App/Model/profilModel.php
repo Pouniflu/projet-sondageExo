@@ -5,7 +5,7 @@ use Core\Database;
 // On ouvre la session de l'utilisateur
 session_start();
 
-class profilModel extends Database
+class ProfilModel extends Database
 {
 
 }

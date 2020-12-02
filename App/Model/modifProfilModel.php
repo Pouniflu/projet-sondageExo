@@ -5,7 +5,7 @@ use Core\Database;
 // On ouvre la session de l'utilisateur
 session_start();
 
-class modifProfilModel extends Database
+class ModifProfilModel extends Database
 {
       // Création d'une méthode modifProfil()
       public function modifProfil() {
