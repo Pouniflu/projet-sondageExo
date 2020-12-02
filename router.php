@@ -12,6 +12,7 @@ use App\Controller\CreatePollController;
 use App\Controller\SignInController;
 use App\Controller\LogInController;
 use App\Controller\profilController;
+use App\Controller\modifProfilController;
 use App\Controller\ChatController;
 use App\Model\ChatModel;
 
@@ -47,6 +48,10 @@ if(array_key_exists("page", $_GET)){
             break;
         case 'profil':
             $controller = new profilController();
+            $controller->renderIndex();
+            break;
+        case 'modifProfil':
+            $controller = new modifProfilController();
             $controller->renderIndex();
             break;
         // case 'chat':
