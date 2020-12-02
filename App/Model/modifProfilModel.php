@@ -24,7 +24,7 @@ class ModifProfilModel extends Database
                 $sendNewProfile = $this->pdo->prepare(
                     "UPDATE t_utilisateurs
                     SET lastName = 'test', firstName = $firstName, pseudo = $pseudo
-                    WHERE lastName = 'Braunschweig' ;
+                    WHERE user_id = $_SESSION['user_id'] ;
                 ");
                 $sendNewprofile->execute(array($_POST['lastName'], $_POST['firstName'], $_POST['pseudo']));
 
