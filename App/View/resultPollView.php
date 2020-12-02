@@ -29,15 +29,21 @@
                         <th><?= $answer->reponse?></th>
                         <?php endforeach; ?>
                     </tr>
+                    <tr>
+                        <th id="nbVote1">0</th>
+                        <th id="nbVote2">0</th>
+                        <th id="nbVote3">0</th>
+                        <th id="nbVote4">0</th>
+                    </tr>
 
                 </tbody>
             </table>
 
             <div id="vote">
-                <button id="sendVote1">Je vote pour le choix 1</button><div id="result1"></div>
-                <button id="sendVote2">Je vote pour le choix 2</button><div id="result2"></div>
-                <button id="sendVote3">Je vote pour le choix 3</button><div id="result3"></div>
-                <button id="sendVote4">Je vote pour le choix 4</button><div id="result4"></div>
+                <button id="sendVote1">Je vote pour la réponse 1</button><div id="result1"></div>
+                <button id="sendVote2">Je vote pour la réponse 2</button><div id="result2"></div>
+                <button id="sendVote3">Je vote pour la réponse 3</button><div id="result3"></div>
+                <button id="sendVote4">Je vote pour la réponse 4</button><div id="result4"></div>
             </div>
             <!-- Bouton pour revenir à la page d'accueil -->
             <a href="?">Aller à la page d'accueil</a>
