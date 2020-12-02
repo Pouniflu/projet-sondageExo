@@ -10,6 +10,8 @@ class HomeModel extends Database {
         // On lance la session pour récupérer les informations de l'utilisateur connecté
         session_start();
 
+        if (!empty($_SESSION['user_id'])) {
+
         // On lance la session pour récupérer les informations de l'utilisateur connecté
         $userID = $_SESSION['user_id'];
 
@@ -27,10 +29,15 @@ class HomeModel extends Database {
 
         // On return ce qu'on a récupéré
         return $query->fetchAll(\PDO::FETCH_OBJ);
+
+        } else {
+            echo("Il faut vous connecter ou vous inscrire!");
+        }
     }
 
     public function getClosedPolls(){
 
+        if (!empty($_SESSION['user_id'])) {
         // On lance la session pour récupérer les informations de l'utilisateur connecté
         $userID = $_SESSION['user_id'];
 
@@ -39,7 +46,7 @@ class HomeModel extends Database {
 
         // On fait une requête SQL pour chercher les informations à afficher
         $query = $this->pdo->prepare(
-            "SELECT creator_id, question, t_utilisateurs.pseudo, sondage_id, activite
+            "SELECT creator_id, question, t_utilisateurs.pseudo, sondage_id
             FROM t_sondages
             INNER JOIN t_utilisateurs ON t_utilisateurs.user_id = t_sondages.creator_id
             WHERE creator_id = ? AND activite = 'close'
@@ -48,5 +55,9 @@ class HomeModel extends Database {
 
         // On return ce qu'on a récupéré
         return $query->fetchAll(\PDO::FETCH_OBJ);
+
+    } else {
+        echo("");
+    }
     }
 }
