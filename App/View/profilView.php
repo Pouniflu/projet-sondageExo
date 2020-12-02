@@ -17,6 +17,9 @@
         <br>
         <p>Password = <?php echo $_SESSION['password']; ?></p>
 
+        <!-- Bouton pour modifier le profil -->
+        <a href="?page=modifProfil">Modifier le profil</a>
+
         <!-- Bouton pour revenir à la page d'accueil -->
         <a href="?">Aller à la page d'accueil</a>
     </main>
