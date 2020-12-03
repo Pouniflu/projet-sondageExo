@@ -23,10 +23,10 @@ class ModifProfilModel extends Database
                 // Injection SQL : envoi des nouvelles données dans la table t_utilisateurs
                 $sendNewProfile = $this->pdo->prepare(
                     "UPDATE t_utilisateurs
-                    SET lastName = 'test', firstName = $firstName, pseudo = $pseudo
-                    WHERE user_id = $_SESSION['user_id'] ;
+                    SET lastName = ?, firstName = ?, pseudo = ?
+                    WHERE `user_id` = ?
                 ");
-                $sendNewprofile->execute(array($_POST['lastName'], $_POST['firstName'], $_POST['pseudo']));
+                $sendNewprofile->execute(array($_POST['lastName'], $_POST['firstName'], $_POST['pseudo'], $_SESSION['user_id']));
 
             } else {
                 // Message pour avertir l'utilisateur qu'un ou plusieurs champs ne sont pas remplis.

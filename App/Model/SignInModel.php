@@ -39,7 +39,7 @@ class SignInModel extends Database {
                                 if(filter_var($userData["email"], FILTER_VALIDATE_EMAIL)) {
 
                                     if($_POST["password"] == $_POST["password2"]) {
-                                        $insertmbr = $this->pdo->prepare("INSERT INTO t_utilisateurs(lastName, firstName, pseudo, email, password) VALUES(?, ?, ?, ?, ?)");
+                                        $insertmbr = $this->pdo->prepare("INSERT INTO t_utilisateurs(lastName, firstName, pseudo, email, password, online) VALUES(?, ?, ?, ?, ?, 0)");
                                         $catch = $insertmbr->execute(array($userData["lastName"], $userData["firstName"], $userData["pseudo"], $userData["email"], $userData["password"]));
                                         if (!$catch) {
                                             return "Ce pseudo est déjà utilisé";

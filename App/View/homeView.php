@@ -49,13 +49,6 @@
         </table>
     </section>
 
-    <!-- Titre des liens -->
-    <h2>Liens</h2>
-
-    <!-- Accès page création de sondage -->
-    <a href="?page=createPoll">Créer un sondage</a>
-    <br>
-
             <!-- Affichage de mes amis Online -->
             <h2> Amis en ligne </2>
 
@@ -93,6 +86,11 @@ if(mysqli_num_rows($result) > 0){
 </section>
 
 
+    <!-- Titre des liens -->
+    <h2>Liens</h2>
+    <!-- Accès page création de sondage -->
+    <a href="?page=createPoll">Créer un sondage</a>
+    <br>
 
     <!-- Se connecter -->
     <a href="?page=logIn">Se connecter</a>
